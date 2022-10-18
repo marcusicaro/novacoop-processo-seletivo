@@ -1,0 +1,176 @@
+/* body */
+body {
+    width: 100%;
+    height: 1310px;
+    background-color: rgb(57,30,79); 
+    background-image: url("bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 61.8% auto;
+    justify-content: center;
+}
+
+/* header positioning - posicionamento do cabeçalho */
+header {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    grid-template-rows: repeat(4, min-content);
+    height: 410px;
+}
+
+
+/* logo */
+img {
+    margin: 40px;
+}
+
+/* header text - texto do cabeçalho */
+h1, p {
+    margin: 0px;
+}
+
+/* main header text - texto principal do cabeçalho */
+h1 {
+    font-size: 36px;
+    color: rgb(244,172,176);
+    margin-bottom: 5px;
+}
+
+/* header smaller text - texto menor do cabeçalho*/
+p {
+    font-size: 18px;
+    color: aliceblue;
+}
+
+/* footer - rodapé */
+footer {
+    background-color:rgb(57,30,79); 
+    width: auto;
+    height: auto;
+    color:aliceblue;
+    display: grid;
+    justify-content: center;
+}
+
+/* formulário */
+form {
+    display: grid;
+}
+
+/* itens list - lista de itens */
+ul {
+    height: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-content: space-evenly;
+  }
+
+
+/* form itens - itens do formulário  */
+li{
+    display: grid;
+    justify-items: center;
+    grid-template-rows: min-content;
+    font-weight: 1000;
+}
+
+/* item description - descrição dos itens */
+label {
+    padding-bottom: 5px;
+}
+
+
+/* inputs*/
+input {
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    -ms-user-select: none;
+}
+
+
+/* form input field - campo para preenchimento do formulário */
+input[type='text'], input[type='email'], input[type='tel'] {
+    height: 2.6em;
+    width: 275px;
+    border-radius: 20px;
+    background-color: rgb(57,30,79);
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    padding-left: 1em;
+}
+
+input[type='submit'] {
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    padding: 15px;
+    font-weight: 900;
+    background-color:rgb(49,218,231);
+    color: rgb(57,30,79); 
+}
+
+
+/* terms - termos */
+#terms-container, input[type='submit'] {
+    align-self: flex-start;
+}
+
+.terms-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+input[type='radio']~label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+input[type='radio']~label::before {
+    content: "";
+    border: 2px solid aliceblue;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: -6px 7px;
+    margin-left: 0px;
+    border-radius: 50%;
+}
+
+input[type='radio']~label::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: hsla(208, 100%, 97%, 0);
+    left: 20px;
+    top: 5px;
+    margin: 1px;
+    margin-left: 2px;
+    border-radius: 50%;
+    transition: all 0.9s;
+}
+
+input[type='radio']:checked + label::after {
+    background-color: hsla(208, 100%, 97%);
+}
+
+/* tamanho do texto dos termos */
+.small-text {
+    font-size: smaller;
+}
